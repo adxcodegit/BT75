@@ -561,76 +561,58 @@ const PLAN = {"race":"2027-02-14","start":"2026-09-07","phases":[{"a":1,"b":4,"n
    Mon Upper A · Wed Lower A · Fri Upper B · Sat Lower B.
    ═══════════════════════════════════════════════════════════════════════ */
 const LIFTS = {
-UA:{key:"UA",name:"Upper A · Push",day:"Monday",dur:"50 min",
-  focus:"Pressing and horizontal pull. No overhead — that gets one concentrated dose on Saturday instead of two mediocre ones.",
-  warm:"30 band pull-aparts · 10 scap push-ups · 10 push-ups · arm circles",
+UA:{key:"UA",name:"Upper A",day:"Monday",dur:"50 min",
+  focus:"Bench first while you are fresh, then back, then arms. Legs are wrecked from Sunday's long run, so everything today sits above the waist.",
+  warm:"30 band pull-aparts \u00b7 10 scap push-ups \u00b7 10 push-ups \u00b7 arm circles",
   groups:[
    {g:"Main lift",ex:[
-     {n:"Barbell bench press",s:4,r:"5",note:"RPE 8. Two in reserve on every set."}]},
-   {g:"Superset A",ex:[
-     {n:"Chest-supported row",s:4,r:"8"},
-     {n:"Incline DB press",s:3,r:"10"}]},
-   {g:"Superset B",ex:[
-     {n:"Half-kneeling cable press",s:3,r:"10 / side",note:"Anti-rotation disguised as a press."},
-     {n:"Cable fly",s:3,r:"12"}]},
-   {g:"Finish",ex:[
-     {n:"Face pull",s:3,r:"15",note:"Shoulder insurance. Never skip it."},
-     {n:"Hanging knee raise",s:3,r:"12"}]}]},
+     {n:"Barbell bench press",s:5,r:"8",note:"RPE 8 on the last set. Two reps in reserve on the rest."}]},
+   {g:"Back",ex:[
+     {n:"Lat pulldown",s:4,r:"8"},
+     {n:"Seated V-row",s:4,r:"8",note:"Chest tall, pull to the navel, no swing."}]},
+   {g:"Chest and arms",ex:[
+     {n:"Cable fly",s:4,r:"8"},
+     {n:"Rope triceps pushdown",s:4,r:"8"},
+     {n:"Bicep curl",s:4,r:"8"}]}]},
 
-LA:{key:"LA",name:"Lower A · Heavy",day:"Wednesday",dur:"55 min",
-  focus:"The heavy leg day, 24 h after Tuesday's quality work so hard days stay stacked. Jumps come first, while you're fresh — plyometrics done tired are just cardio.",
-  warm:"3 min bike · leg swings · 15 bodyweight squats · 15 glute bridges",
+LA:{key:"LA",name:"Lower A",day:"Wednesday",dur:"50 min",
+  focus:"The heavy leg day, 24 h after Tuesday's quality work so the hard days stay stacked together and the easy days stay genuinely easy.",
+  warm:"3 min bike \u00b7 leg swings \u00b7 15 bodyweight squats \u00b7 15 glute bridges",
   groups:[
-   {g:"Plyometric primer",ex:[
-     {n:"Pogo hop",s:3,r:"20",note:"Stiff ankles, minimal knee bend. Ground contact as short as possible."},
-     {n:"Box jump",s:4,r:"3",note:"Maximum intent, full recovery. Step down, never jump down."}]},
    {g:"Main lift",ex:[
-     {n:"Back squat",s:4,r:"4",note:"82–88% of 1RM. Never grind — you run tempo tomorrow."}]},
+     {n:"Back squat",s:5,r:"8",note:"Never grind the last rep \u2014 you run tempo tomorrow."}]},
    {g:"Posterior chain",ex:[
-     {n:"Romanian deadlift",s:3,r:"6",note:"Hamstrings do most of the work in the back half of a half."},
-     {n:"Bulgarian split squat",s:3,r:"8 / leg",note:"Running is a one-legged sport."}]},
-   {g:"Tendon work",ex:[
-     {n:"Standing calf raise",s:4,r:"10",note:"Three-second lower. This is Achilles insurance as mileage climbs."},
-     {n:"Nordic negative or seated leg curl",s:3,r:"8"}]},
-   {g:"Core",ex:[
-     {n:"Pallof press",s:3,r:"12 / side"}]}]},
+     {n:"DB Romanian deadlift",s:4,r:"8",note:"Hamstrings do most of the work in the back half of a half."},
+     {n:"Seated leg curl",s:4,r:"8"}]},
+   {g:"Quads",ex:[
+     {n:"Leg extension",s:4,r:"8"}]}]},
 
-UB:{key:"UB",name:"Upper B · Pull",day:"Friday",dur:"50 min",
-  focus:"Pulling and arms. Legs get complete rest — Saturday is a double and Sunday is the long run.",
-  warm:"Dead hangs · band pull-aparts · 10 inverted rows",
+UB:{key:"UB",name:"Upper B",day:"Friday",dur:"55 min",
+  focus:"Incline pressing and back, with the deadlift last. The deadlift is the one lift here that touches the legs, so it stays submaximal \u2014 Saturday is a double and Sunday is the long run.",
+  warm:"Dead hangs \u00b7 band pull-aparts \u00b7 10 inverted rows",
   groups:[
    {g:"Main lift",ex:[
-     {n:"Weighted pull-up or lat pulldown",s:4,r:"6",note:"Add load once you clear 8 clean reps."}]},
-   {g:"Superset A",ex:[
-     {n:"DB bench press",s:3,r:"10"},
-     {n:"Single-arm DB row",s:3,r:"10 / side"}]},
-   {g:"Superset B",ex:[
-     {n:"Wide-grip cable row",s:3,r:"12"},
-     {n:"Incline DB curl",s:3,r:"12"}]},
-   {g:"Finish",ex:[
-     {n:"Rope triceps pushdown",s:3,r:"15"},
-     {n:"Farmer carry",s:3,r:"40 m",note:"Heavy. Grip, core and posture in one."},
-     {n:"Dead bug",s:3,r:"10 / side"}]}]},
+     {n:"Incline barbell bench press",s:5,r:"8"}]},
+   {g:"Chest and back",ex:[
+     {n:"Chest fly",s:4,r:"8"},
+     {n:"Iso-lateral row",s:4,r:"8"},
+     {n:"Lat pulldown",s:4,r:"8"}]},
+   {g:"Heavy pull",ex:[
+     {n:"Deadlift",s:5,r:"8",note:"RPE 7, three reps in reserve. This is the day before a leg day and two days before the long run."}]}]},
 
-LB:{key:"LB",name:"Lower B · Submaximal",day:"Saturday",dur:"55 min",
+LB:{key:"LB",name:"Lower B",day:"Saturday",dur:"55 min",
   focus:"After the morning easy run, before Sunday's long run. Shoulders carry the hard volume today; legs deliberately do not. Everything below the waist stops three reps short.",
-  warm:"Hip airplanes · glute bridges · band dislocates · 10 bodyweight hinges",
+  warm:"Hip airplanes \u00b7 glute bridges \u00b7 band dislocates \u00b7 10 bodyweight hinges",
   groups:[
-   {g:"Elastic primer",ex:[
-     {n:"A-skip",s:3,r:"20 m",note:"Cueing, not conditioning. Tall posture, quick ground."},
-     {n:"Ankle bound",s:3,r:"15",note:"Low and springy. Stop the moment it gets heavy."}]},
    {g:"Main lift",ex:[
-     {n:"Trap-bar deadlift",s:3,r:"5",note:"RPE 7. Three reps in reserve, always."}]},
-   {g:"Glutes and single leg",ex:[
-     {n:"Barbell hip thrust",s:3,r:"8",note:"Glutes without loading the spine or the knees."},
-     {n:"Box step-up, knee height",s:3,r:"10 / leg",note:"Bodyweight or light DBs only."},
-     {n:"Seated calf raise",s:3,r:"15",note:"Soleus. Different muscle from the standing version, and the one that fails late in a race."}]},
-   {g:"Shoulders — the hard set of the day",ex:[
-     {n:"Seated DB shoulder press",s:4,r:"8",note:"Push this one. Nothing else today is heavy."},
-     {n:"Lateral raise",s:3,r:"15"},
-     {n:"Rear delt fly",s:3,r:"15"}]},
-   {g:"Core",ex:[
-     {n:"Copenhagen plank",s:2,r:"20 s / side",note:"Adductors: the running injury nobody trains for."}]}]}
+     {n:"Leg press",s:5,r:"8",note:"Stop three reps short. Saturday is not the day to grind."}]},
+   {g:"Legs",ex:[
+     {n:"Split squat",s:4,r:"8",note:"Running is a one-legged sport."},
+     {n:"Seated leg curl",s:4,r:"8"},
+     {n:"DB Romanian deadlift",s:4,r:"8",note:"Light \u2014 this is the second hamstring session of the week."}]},
+   {g:"Shoulders \u2014 the hard set of the day",ex:[
+     {n:"Seated DB shoulder press",s:5,r:"8",note:"Push this one. Nothing else today is heavy."},
+     {n:"Lateral raise",s:4,r:"8"}]}]}
 };
 const LIFT_DAYS = {1:"UA",3:"LA",5:"UB",6:"LB"};
 
@@ -638,8 +620,8 @@ const LIFT_PHASE = {
  "Foundation":     {tag:"Build",    note:"Four sessions. Add load to the main lifts every week you can."},
  "Aerobic build":  {tag:"Build",    note:"Four sessions. Mileage is climbing — hold the main lifts, don't chase them."},
  "Threshold":      {tag:"Hold",     note:"Four sessions, one set off every accessory. The main lifts stay heavy."},
- "Hill strength":  {tag:"Hold",     note:"Hills are already doing plyometric work. Halve the jump volume on Wednesday."},
- "Race specific":  {tag:"Reduce",   note:"Drop to three sessions — skip Saturday's lower work entirely. Main lifts to 2 × 4."},
+ "Hill strength":  {tag:"Hold",     note:"The hills are doing the explosive work now. Keep the lifts exactly as written and add nothing."},
+ "Race specific":  {tag:"Reduce",   note:"Drop to three sessions — skip Saturday's lower work entirely. Main lifts to 3 × 8."},
  "Taper":          {tag:"Minimal",  note:"Monday only, two sets per exercise at 60% of usual load. Nothing else."}
 };
 
@@ -692,24 +674,25 @@ const BASE_FOODS = [
 ];
 
 /* Prescribed-lift name list for the free-text add box. */
-const EX_LIST = ["Barbell bench press","Incline DB press","DB bench press","Cable fly","Face pull",
- "Chest-supported row","Lat pulldown","Weighted pull-up","Wide-grip cable row","Single-arm DB row",
- "Back squat","Front squat","Leg press","Romanian deadlift","Trap-bar deadlift","Barbell hip thrust",
- "Bulgarian split squat","Box step-up","Seated leg curl","Nordic negative","Standing calf raise",
- "Seated calf raise","Box jump","Pogo hop","Ankle bound","A-skip","Seated DB shoulder press",
- "Lateral raise","Rear delt fly","Incline DB curl","Rope triceps pushdown","Farmer carry",
- "Hanging knee raise","Pallof press","Dead bug","Copenhagen plank"];
+const EX_LIST = ["Barbell bench press","Incline barbell bench press","DB bench press","Cable fly",
+ "Chest fly","Lat pulldown","Seated V-row","Iso-lateral row","Wide-grip cable row","Single-arm DB row",
+ "Weighted pull-up","Back squat","Front squat","Leg press","Deadlift","Romanian deadlift",
+ "DB Romanian deadlift","Split squat","Bulgarian split squat","Box step-up","Seated leg curl",
+ "Leg extension","Standing calf raise","Seated calf raise","Barbell hip thrust",
+ "Seated DB shoulder press","Lateral raise","Rear delt fly","Bicep curl","Incline DB curl",
+ "Rope triceps pushdown","Face pull","Farmer carry","Hanging knee raise","Pallof press","Dead bug"];
 
 /* Gym floor vocabulary — short names, for the tap grid. */
 const EX_DB = [
  {c:"Legs",n:"BB Squat"},{c:"Legs",n:"Front Squat"},{c:"Legs",n:"Leg Press"},{c:"Legs",n:"Leg Ext"},
  {c:"Legs",n:"Leg Curl"},{c:"Legs",n:"Lunge"},{c:"Legs",n:"Bulgarian"},{c:"Legs",n:"Step Up"},
  {c:"Legs",n:"RDL"},{c:"Legs",n:"Hip Thrust"},{c:"Legs",n:"Calf Raise"},{c:"Legs",n:"Seated Calf"},
- {c:"Legs",n:"Abductor"},{c:"Legs",n:"Adductor"},
+ {c:"Legs",n:"Abductor"},{c:"Legs",n:"Adductor"},{c:"Legs",n:"Split Squat"},
  {c:"Chest",n:"BB Flat"},{c:"Chest",n:"BB Incline"},{c:"Chest",n:"DB Flat"},{c:"Chest",n:"DB Incline"},
  {c:"Chest",n:"Fly Machine"},{c:"Chest",n:"Fly Cable"},{c:"Chest",n:"Pushups"},
  {c:"Back",n:"Lat Pull"},{c:"Back",n:"Cable Row"},{c:"Back",n:"Iso Row"},{c:"Back",n:"DB Row"},
- {c:"Back",n:"Deadlift"},{c:"Back",n:"Trap Bar DL"},{c:"Back",n:"Pull Up"},{c:"Back",n:"Pull Over"},
+ {c:"Back",n:"V-Row"},{c:"Back",n:"Deadlift"},{c:"Back",n:"Trap Bar DL"},{c:"Back",n:"Pull Up"},
+ {c:"Back",n:"Pull Over"},
  {c:"Shoulders",n:"Mil Press"},{c:"Shoulders",n:"DB Press"},{c:"Shoulders",n:"Mach Press"},
  {c:"Shoulders",n:"Arnold Pr"},{c:"Shoulders",n:"Lat Raise"},{c:"Shoulders",n:"Rear Delt"},
  {c:"Shoulders",n:"Face Pull"},{c:"Shoulders",n:"Y-Raise"},
@@ -722,10 +705,10 @@ const EX_DB = [
 ];
 const EX_CATS = ["All","Legs","Chest","Back","Shoulders","Arms","Core","Plyo"];
 const DEFAULT_PRESETS = {
- "Upper A · Push":["BB Flat","Iso Row","DB Incline","Fly Cable","Face Pull","Hang Raise"],
- "Lower A · Heavy":["Pogo Hop","Box Jump","BB Squat","RDL","Bulgarian","Calf Raise","Pallof"],
- "Upper B · Pull":["Pull Up","DB Flat","DB Row","Cable Row","Incline Curl","Tri Push","Farmer Carry"],
- "Lower B · Sub-max":["A-Skip","Trap Bar DL","Hip Thrust","Step Up","DB Press","Lat Raise","Rear Delt"]
+ "Upper A":["BB Flat","Lat Pull","V-Row","Fly Cable","Tri Push","Bi Curl"],
+ "Lower A":["BB Squat","RDL","Leg Curl","Leg Ext"],
+ "Upper B":["BB Incline","Fly Machine","Iso Row","Lat Pull","Deadlift"],
+ "Lower B":["Leg Press","Split Squat","Leg Curl","RDL","DB Press","Lat Raise"]
 };
 
 const RUN_KIND = {easy:"Easy",steady:"Steady",long:"Long run",quality:"Quality",test:"Time trial",race:"Race"};
@@ -952,6 +935,18 @@ function loadAll(){
     SETTINGS.hardStart  = "2026-09-07";
     SETTINGS.blockStart = PLAN.start;
     SETTINGS.startsAligned = 2;
+    saveSettings();
+  }
+  /* The four stock routines were renamed and rebuilt when the lifting plan
+     changed. Drop the old ones once and seed the new ones. Anything you built
+     yourself is left alone. */
+  if(SETTINGS.presetsVersion !== 2){
+    ["Upper A \u00b7 Push","Lower A \u00b7 Heavy","Upper B \u00b7 Pull","Lower B \u00b7 Sub-max"]
+      .forEach(n=>{ delete SETTINGS.presets[n]; });
+    Object.keys(DEFAULT_PRESETS).forEach(n=>{
+      if(!SETTINGS.presets[n]) SETTINGS.presets[n] = DEFAULT_PRESETS[n].slice();
+    });
+    SETTINGS.presetsVersion = 2;
     saveSettings();
   }
 }
